@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Face Recognition Attendance System</h1>
+    <button id="start_button">Start</button>
+    <button id="stop_button" style="display: none;">Stop</button>
+    <div>
+        <img id="video_feed" width="640" height="480" style="display: none;" />
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var start_button = document.getElementById('start_button');
+            var stop_button = document.getElementById('stop_button');
+            var video_feed = document.getElementById('video_feed');
+
+            var streaming = false;
+            var video_url = '/video_feed';
+
+            start_button.addEventListener('click', function() {
+                if (!streaming) {
+                    streaming = true;
+                    start_button.style.display = 'none';
+                    stop_button.style.display = 'block';
+                    video_feed.style.display = 'block';
+                    video_feed.src = video_url;
+                }
+            });
+
+            stop_button.addEventListener('click', function() {
+                if (streaming) {
+                    streaming = false;
+                    start_button.style.display = 'block';
+                    stop_button.style.display = 'none';
+                    video_feed.style.display = 'none';
+                    video_feed.src = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
