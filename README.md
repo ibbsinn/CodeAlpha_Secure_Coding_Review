@@ -1,1 +1,1 @@
-This is the third task assigned to me by CodeAlpha. Make sure to have the follwing libraries installed. flask, Flask, render_template, Response, cv2 , numpy, os, csv, time and datetime are the libraries that should be installed before hand. 
+This is the third task assigned to me by CodeAlpha. Make sure to have the follwing libraries installed. flask, Flask, render_template, Response, cv2 , numpy, os, csv, time and datetime are the libraries that should be installed before hand. It is to be noted that the html file should be opened parallel to the python file. 
